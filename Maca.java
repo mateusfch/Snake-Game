@@ -28,7 +28,7 @@ public class Maca extends ElementoBasico {
             this.placar.macasComidasAtualizadas(jogador.getMacasComidas());
             macaCapturada = false;
 
-            int linAleatoria = (int) (Math.random() * 5);
+            int linAleatoria = (int) (Math.random() * 4);
             int colAleatoria = (int) (Math.random() * 5);
 
             // Para impedir que a nova maçã ocupe um quadrante <atualmente> ocupado
@@ -37,7 +37,7 @@ public class Maca extends ElementoBasico {
             // precisa se preocupar de não sair do loop
             ElementoBasico refQuadranteSorteado = t.getElementoNaPosicao(linAleatoria, colAleatoria);
             while (refQuadranteSorteado instanceof Maca || refQuadranteSorteado instanceof Personagem) {
-                linAleatoria = (int) (Math.random() * 5);
+                linAleatoria = (int) (Math.random() * 4);
                 colAleatoria = (int) (Math.random() * 5);
                 refQuadranteSorteado = t.getElementoNaPosicao(linAleatoria, colAleatoria);
             }

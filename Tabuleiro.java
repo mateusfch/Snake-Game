@@ -3,7 +3,7 @@ import javax.swing.JPanel;
 import java.awt.*;
 
 public class Tabuleiro extends JPanel {
-    private static final int MAXLIN = 5;
+    private static final int MAXLIN = 4;
     private static final int MAXCOL = 5;
     private ElementoBasico[][] celulas;
 

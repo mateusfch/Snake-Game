@@ -45,7 +45,7 @@ public class App extends JFrame implements ActionListener {
 
         Placar placar = new Placar(pontuacao);
         // Insere os personagens no tabuleiro
-        personagem = new Personagem("Feliz", "icone.jpg", 2, 0, tabuleiro);
+        personagem = new Personagem("Feliz", "icone.jpg", 0, 0, tabuleiro, null);
         ElementoBasico anterior = tabuleiro.insereElemento(personagem);
         personagem.setAnterior(anterior);
 
