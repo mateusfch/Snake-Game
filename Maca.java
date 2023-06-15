@@ -1,6 +1,3 @@
-import javax.swing.JOptionPane;
-import java.util.*;
-
 public class Maca extends ElementoBasico {
     private boolean macaCapturada;
     private int nroMaca;

@@ -1,5 +1,3 @@
-import javax.lang.model.util.ElementScanner14;
-
 public class Parte extends Personagem {
 
     public Parte(String id, String iconPath, int linInicial, int colInicial, Tabuleiro tabuleiro, Parte atras) {

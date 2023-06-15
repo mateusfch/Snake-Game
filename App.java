@@ -21,7 +21,9 @@ public class App extends JFrame implements ActionListener {
         // Define os componentes da tela
         tabuleiro = new Tabuleiro();
 
-        JPanel botoesDirecao = new JPanel(new FlowLayout());
+        JPanel botoesDirecao1 = new JPanel(new FlowLayout());
+        JPanel botoesDirecao2 = new JPanel(new FlowLayout());
+        JPanel botoesDirecao3 = new JPanel(new FlowLayout());
         JButton butDir = new JButton("Direita");
         butDir.addActionListener(this);
         JButton butEsq = new JButton("Esquerda");
@@ -30,10 +32,10 @@ public class App extends JFrame implements ActionListener {
         butCima.addActionListener(this);
         JButton butBaixo = new JButton("Abaixo");
         butBaixo.addActionListener(this);
-        botoesDirecao.add(butEsq);
-        botoesDirecao.add(butDir);
-        botoesDirecao.add(butCima);
-        botoesDirecao.add(butBaixo);
+        botoesDirecao2.add(butEsq);
+        botoesDirecao2.add(butDir);
+        botoesDirecao1.add(butCima);
+        botoesDirecao3.add(butBaixo);
         JLabel pontuacao = new JLabel("PONTOS: " + jogador1.getMacasComidas());
 
         JPanel painelGeral = new JPanel();
@@ -41,7 +43,9 @@ public class App extends JFrame implements ActionListener {
         painelGeral.setLayout(new BoxLayout(painelGeral, BoxLayout.PAGE_AXIS));
         painelGeral.add(tabuleiro);
         painelGeral.add(pontuacao);
-        painelGeral.add(botoesDirecao);
+        painelGeral.add(botoesDirecao1);
+        painelGeral.add(botoesDirecao2);
+        painelGeral.add(botoesDirecao3);
 
         Placar placar = new Placar(pontuacao);
         // Insere os personagens no tabuleiro
@@ -51,10 +55,6 @@ public class App extends JFrame implements ActionListener {
 
         Maca maca1 = new Maca("Maca1", 0, 2, 4, tabuleiro, jogador1, placar);
         tabuleiro.insereElemento(maca1);
-        // Pista pista2 = new Pista("Pista22", 22, 0, 2, tabuleiro);
-        // tabuleiro.insereElemento(pista2);
-        // Eca eca = new Eca("Eca2215", 2215, 4, 2, tabuleiro);
-        // tabuleiro.insereElemento(eca);
 
         // Exibe a janela
         this.add(painelGeral);

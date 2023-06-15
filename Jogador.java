@@ -1,6 +1,3 @@
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
 public class Jogador {
   private String nome;
   private int macasComidas;
