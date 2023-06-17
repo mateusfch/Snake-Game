@@ -48,6 +48,10 @@ public class Tabuleiro extends JPanel {
         }
     }
 
+    public static int numQuadradrantesMatriz() {
+        return MAXCOL * MAXCOL;
+    }
+
     public void desapareceMaca(int linha, int coluna) {
         celulas[linha][coluna] = new Fundo("Fundo[" + linha + "][" + coluna + "]", linha, coluna, this);
     }

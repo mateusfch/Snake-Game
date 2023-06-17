@@ -3,6 +3,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
 import java.awt.*;
@@ -16,7 +17,7 @@ public class App extends JFrame implements ActionListener {
     public App() {
         super();
 
-        Jogador jogador1 = new Jogador("Giselle");
+        Jogador jogador1 = new Jogador("EDUARDO");
 
         // Define os componentes da tela
         tabuleiro = new Tabuleiro();
@@ -36,7 +37,9 @@ public class App extends JFrame implements ActionListener {
         botoesDirecao2.add(butDir);
         botoesDirecao1.add(butCima);
         botoesDirecao3.add(butBaixo);
-        JLabel pontuacao = new JLabel("PONTOS: " + jogador1.getMacasComidas());
+
+        JLabel pontuacao = new JLabel(
+                "PONTOS: " + jogador1.getMacasComidas());
 
         JPanel painelGeral = new JPanel();
 
@@ -49,7 +52,7 @@ public class App extends JFrame implements ActionListener {
 
         Placar placar = new Placar(pontuacao);
         // Insere os personagens no tabuleiro
-        personagem = new Personagem("Feliz", "icone3.jpg", 0, 0, tabuleiro, null);
+        personagem = new Personagem("Cobrinha", "icone3.jpg", 0, 0, tabuleiro, null);
         ElementoBasico anterior = tabuleiro.insereElemento(personagem);
         personagem.setAnterior(anterior);
 

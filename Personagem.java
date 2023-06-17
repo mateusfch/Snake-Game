@@ -51,7 +51,7 @@ public class Personagem extends ElementoBasico {
             elemento.acao(this);
         } else if (elemento instanceof Parte) {
             // fim de jogo
-            JOptionPane.showMessageDialog(null, "GAME OVERE!", "GAME OVER", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "GAME OVER!", "", JOptionPane.WARNING_MESSAGE);
             System.exit(0);
 
         }
@@ -73,7 +73,7 @@ public class Personagem extends ElementoBasico {
             elemento.acao(this);
         } else if (elemento instanceof Parte) {
             // fim de jogo
-            JOptionPane.showMessageDialog(null, "GAME OVER!!", "GAME OVER", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "GAME OVER!", "", JOptionPane.WARNING_MESSAGE);
             System.exit(0);
         }
         this.anterior = getTabuleiro().insereElemento(this);
@@ -94,7 +94,7 @@ public class Personagem extends ElementoBasico {
             elemento.acao(this);
         } else if (elemento instanceof Parte) {
             // fim de jogo
-            JOptionPane.showMessageDialog(null, "GAME OVER!", "GAME OVER", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "GAME OVER!", "", JOptionPane.WARNING_MESSAGE);
             System.exit(0);
         }
         this.anterior = getTabuleiro().insereElemento(this);
@@ -115,7 +115,7 @@ public class Personagem extends ElementoBasico {
             elemento.acao(this);
         } else if (elemento instanceof Parte) {
             // fim de jogo
-            JOptionPane.showMessageDialog(null, "GAME OVER!", "GAME OVER", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "GAME OVER!", "", JOptionPane.WARNING_MESSAGE);
             System.exit(0);
         }
         this.anterior = getTabuleiro().insereElemento(this);
