@@ -49,7 +49,7 @@ public class App extends JFrame implements ActionListener {
 
         Placar placar = new Placar(pontuacao);
         // Insere os personagens no tabuleiro
-        personagem = new Personagem("Feliz", "icone.jpg", 0, 0, tabuleiro, null);
+        personagem = new Personagem("Feliz", "icone3.jpg", 0, 0, tabuleiro, null);
         ElementoBasico anterior = tabuleiro.insereElemento(personagem);
         personagem.setAnterior(anterior);
 
@@ -70,15 +70,19 @@ public class App extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent arg0) {
         JButton but = (JButton) arg0.getSource();
         if (but.getText().equals("Direita")) {
+            personagem.mudaIcone("icone3.jpg");
             personagem.moveDireita();
         }
         if (but.getText().equals("Esquerda")) {
+            personagem.mudaIcone("icone.jpg");
             personagem.moveEsquerda();
         }
         if (but.getText().equals("Acima")) {
+            personagem.mudaIcone("icone4.jpg");
             personagem.moveCima();
         }
         if (but.getText().equals("Abaixo")) {
+            personagem.mudaIcone("icone2.jpg");
             personagem.moveBaixo();
         }
         tabuleiro.atualizaVisualizacao();

@@ -29,6 +29,11 @@ public abstract class ElementoBasico extends JButton {
         this.setIcon(imagem);
     }
 
+    public void mudaIcone(String iconPath) {
+        this.imagem = Tabuleiro.createImageIcon(iconPath);
+        this.setIcon(this.imagem);
+    }
+
     public String getId() {
         return id;
     }

@@ -1,5 +1,7 @@
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 public class Personagem extends ElementoBasico {
     private ElementoBasico anterior;
     private List<ElementoBasico> lista;
@@ -43,12 +45,15 @@ public class Personagem extends ElementoBasico {
         // Verifica se tem algum elemento de interesse na nova posicao
         // e interage de acordo
         ElementoBasico elemento = getTabuleiro().getElementoNaPosicao(this.getLin(), this.getCol());
+
         if (elemento instanceof Maca) {
             addParte();
             elemento.acao(this);
-        }
-        else if (elemento instanceof Parte) {
+        } else if (elemento instanceof Parte) {
             // fim de jogo
+            JOptionPane.showMessageDialog(null, "GAME OVERE!", "GAME OVER", JOptionPane.WARNING_MESSAGE);
+            System.exit(0);
+
         }
         this.anterior = getTabuleiro().insereElemento(this);
     }
@@ -66,9 +71,10 @@ public class Personagem extends ElementoBasico {
         if (elemento instanceof Maca) {
             addParte();
             elemento.acao(this);
-        }
-        else if (elemento instanceof Parte) {
+        } else if (elemento instanceof Parte) {
             // fim de jogo
+            JOptionPane.showMessageDialog(null, "GAME OVER!!", "GAME OVER", JOptionPane.WARNING_MESSAGE);
+            System.exit(0);
         }
         this.anterior = getTabuleiro().insereElemento(this);
     }
@@ -86,9 +92,10 @@ public class Personagem extends ElementoBasico {
         if (elemento instanceof Maca) {
             addParte();
             elemento.acao(this);
-        }
-        else if (elemento instanceof Parte) {
+        } else if (elemento instanceof Parte) {
             // fim de jogo
+            JOptionPane.showMessageDialog(null, "GAME OVER!", "GAME OVER", JOptionPane.WARNING_MESSAGE);
+            System.exit(0);
         }
         this.anterior = getTabuleiro().insereElemento(this);
     }
@@ -106,20 +113,20 @@ public class Personagem extends ElementoBasico {
         if (elemento instanceof Maca) {
             addParte();
             elemento.acao(this);
-        }
-        else if (elemento instanceof Parte) {
+        } else if (elemento instanceof Parte) {
             // fim de jogo
+            JOptionPane.showMessageDialog(null, "GAME OVER!", "GAME OVER", JOptionPane.WARNING_MESSAGE);
+            System.exit(0);
         }
         this.anterior = getTabuleiro().insereElemento(this);
     }
 
     public void addParte() {
         if (atras == null) {
-            atras = new Parte("parte","icone.jpg",oldLin,oldCol,getTabuleiro(),null);
+            atras = new Parte("parte", "iconeParteReduzido.jpg", oldLin, oldCol, getTabuleiro(), null);
             ElementoBasico ant = getTabuleiro().insereElemento(atras);
             atras.setAnterior(ant);
-        }
-        else {
+        } else {
             atras.addParte();
         }
     }

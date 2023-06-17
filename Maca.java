@@ -25,8 +25,8 @@ public class Maca extends ElementoBasico {
             this.placar.macasComidasAtualizadas(jogador.getMacasComidas());
             macaCapturada = false;
 
-            int linAleatoria = (int) (Math.random() * 4);
-            int colAleatoria = (int) (Math.random() * 5);
+            int linAleatoria = (int) (Math.random() * 6);
+            int colAleatoria = (int) (Math.random() * 10);
 
             // Para impedir que a nova maçã ocupe um quadrante <atualmente> ocupado
             // É quase impossível a cobra ocupar todos os quadrantes, né? Acho q por
